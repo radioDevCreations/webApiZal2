@@ -1,0 +1,18 @@
+﻿@page
+@model RazorPages.Pages.LoginModel
+@{
+    <h1>Login</h1>
+
+    <form method="post">
+        <div><span>Email</span></div>
+        <input type="text" name="email" class="form__field" />
+        <br></br>
+        <div><span>Password</span></div>
+        <input type="password" name="password" class="form__field" />
+        <br></br>
+        <button type="submit">Login</button>
+    </form>
+    <br></br>
+     <a class="nav-link" asp-area="" asp-page="/SignIn">SignIn</a>
+ 
+}

@@ -1,0 +1,66 @@
+﻿@page
+@model RazorPages.Pages.Harbour.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Harbour</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Harbour.Name" class="control-label"></label>
+                <input asp-for="Harbour.Name" class="form-control" />
+                <span asp-validation-for="Harbour.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Harbour.Type" class="control-label"></label>
+                <input asp-for="Harbour.Type" class="form-control" />
+                <span asp-validation-for="Harbour.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Harbour.Street" class="control-label"></label>
+                <input asp-for="Harbour.Street" class="form-control" />
+                <span asp-validation-for="Harbour.Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Harbour.StreetNumber" class="control-label"></label>
+                <input asp-for="Harbour.StreetNumber" class="form-control" />
+                <span asp-validation-for="Harbour.StreetNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Harbour.City" class="control-label"></label>
+                <input asp-for="Harbour.City" class="form-control" />
+                <span asp-validation-for="Harbour.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Harbour.ZipCode" class="control-label"></label>
+                <input asp-for="Harbour.ZipCode" class="form-control" />
+                <span asp-validation-for="Harbour.ZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Harbour.Country" class="control-label"></label>
+                <input asp-for="Harbour.Country" class="form-control" />
+                <span asp-validation-for="Harbour.Country" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Harbour.Id" />
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
